@@ -40,6 +40,8 @@ object protagonista{
   method venderPociones() {
     self.agregarDinero(self.sumaValorPocionesDeColor_("verde"))
     self.pocionesDeColor_("verde").forEach({pocionVerde => inventario.remove(pocionVerde)})
+    self.agregarDinero(self.sumaValorPocionesDeColor_("violeta"))
+    self.pocionesDeColor_("violeta").forEach({pocionVerde => inventario.remove(pocionVerde)})
   }
 }
 

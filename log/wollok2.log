@@ -490,3 +490,7 @@
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\cpu\\Documents\\Trabajos de la universidad\\Programacion Con Objetos\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":1283,"timestamp":"2025-06-24T22:08:15.163Z"}
 {"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on c:\\Users\\cpu\\Documents\\Trabajos de la universidad\\Programacion Con Objetos\\jueguitoAlquimista","timeElapsed":34022,"timestamp":"2025-06-24T22:08:47.900Z"}
 >>>>>>> 2f9eab43d045d6134b5d931542d0a3fae6fcdd95
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34me:\\dev\\OBJ\\alquimia\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":307,"timestamp":"2025-06-24T22:37:29.036Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on e:\\dev\\OBJ\\alquimia\\jueguitoAlquimista","timeElapsed":47010,"timestamp":"2025-06-24T22:38:15.738Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34me:\\dev\\OBJ\\alquimia\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":337,"timestamp":"2025-06-24T22:38:17.692Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on e:\\dev\\OBJ\\alquimia\\jueguitoAlquimista","timeElapsed":33041,"timestamp":"2025-06-24T22:38:50.396Z"}
