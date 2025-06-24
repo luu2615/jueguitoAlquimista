@@ -1,21 +1,40 @@
 import visual.*
 import protagonista.*
-class Mejora1 inherits Visual(position = game.at(1,0)){
-  var precio = "100"
-  var imagen = "mejora1SinComprar.png"
-  override method image() = imagen
+class Mejora inherits Visual(){
+  var precio
   method text() = precio
   method textColor() = "FFDE59"
-  override method efecto() {
-  if(protagonista.dinero() == 100){
-    protagonista.adquirirEquipamiento()
-    protagonista.removerDinero(100)
+  var imagen
+  override method image() = imagen
+  method pasarAComprada(dineroGastado,imagenNueva) {
+    protagonista.removerDinero(dineroGastado)
     precio = 0
-    imagen = "mejora1Comprada.png"
+    imagen = imagenNueva
     game.sound("afirmativo.wav").play()
-  } else {
+  }
+  method negarCompra() {
     game.say(self, "No tenes suficientes monedas")
     game.sound("error.wav").play()
   }
+}
+class Mejora1 inherits Mejora(precio = "100",imagen = "mejora1SinComprar.png",position = game.at(1,0)){
+  override method efecto() {
+  if(protagonista.dinero() >= precio){
+    protagonista.adquirirEquipamiento()
+    self.pasarAComprada(precio, "mejora1Comprada.png")
+  } else {
+    self.negarCompra()
+  }
   }
 }
+class Mejora2 inherits Mejora(precio = "200",imagen = "mejora2SinComprar.png",position = game.at(2,0)){
+  override method efecto() {
+  if(protagonista.dinero() >= precio){
+    protagonista.adquirirEquipamiento()
+    self.pasarAComprada(precio, "mejora2Comprada.png")
+  } else {
+    self.negarCompra()
+  }
+  }
+}
+
