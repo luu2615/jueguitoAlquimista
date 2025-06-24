@@ -1,26 +1,24 @@
+import visual.*
 import protagonista.*
-class Visual{
-  var property position
-  method image() = "calderon.png"
-  method efecto() {}
-}
 class Pocion{
   method valor()
   method color() 
 }
 class PocionVerde inherits Pocion{
-  override method valor() = 100
+  override method valor() = 10
   override method color() = "verde"
 }
-class CajaVenta inherits Visual(position = game.at(8,4)){
+class CajaVenta inherits Visual(position = game.at(4,2)){
   override method image() = "cajaVentas.png"
     override method efecto() {
     protagonista.venderPociones()
+    game.sound("vender.wav").play()
   }
 }
-class CalderonVerde inherits Visual(position = game.at(2,7)){
+class CalderonVerde inherits Visual(position = game.at(1,4)){
   override method image() = "calderonVerde.png"
   override method efecto() {
     protagonista.agregarPocion(new PocionVerde())
+    game.sound("brebaje.wav").play()
   }
 }
