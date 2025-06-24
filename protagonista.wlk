@@ -15,14 +15,11 @@ object protagonista{
   method hayLugarLibreHacia_(direccion) = self.hayObjetoEn_(direccion)
 
   //Logica upgrades
-  var equipamientoPociones = false
-  method adquirirEquipamiento() {
-    equipamientoPociones = true
-  }
-  method tieneEquipamiento() = equipamientoPociones
+  var property tieneEquipamientoPociones = false
+  var property tienePocionesValiosas = false
   //Logica pociones
   method agregarPocion(pocion) {
-    if(self.tieneEquipamiento()) {
+    if(self.tieneEquipamientoPociones()) {
       inventario.add(pocion)
       inventario.add(pocion)
     } else {
@@ -36,9 +33,12 @@ object protagonista{
   method removerDinero(cantidad) {
     dinero = dinero - cantidad
   }
-  //Logica venta
+  //Logica venta y si tiene pociones valiosas adquiere el doble de dinero
+  method agregarDinero(cantidad) {
+    if(self.tienePocionesValiosas()) {dinero = dinero + cantidad * 2} else {dinero = dinero + cantidad}
+  }
   method venderPociones() {
-    dinero = dinero + self.sumaValorPocionesDeColor_("verde")
+    self.agregarDinero(self.sumaValorPocionesDeColor_("verde"))
     self.pocionesDeColor_("verde").forEach({pocionVerde => inventario.remove(pocionVerde)})
   }
 }

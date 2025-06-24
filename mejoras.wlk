@@ -2,7 +2,8 @@ import visual.*
 import protagonista.*
 class Mejora inherits Visual(){
   var precio
-  method text() = precio
+  method precio() = precio
+  method text() = if(self.precio() > 0) self.precio().toString() else ""
   method textColor() = "FFDE59"
   var imagen
   override method image() = imagen
@@ -17,21 +18,21 @@ class Mejora inherits Visual(){
     game.sound("error.wav").play()
   }
 }
-class Mejora1 inherits Mejora(precio = "100",imagen = "mejora1SinComprar.png",position = game.at(1,0)){
+class Mejora1 inherits Mejora(precio = 100,imagen = "mejora1SinComprar.png",position = game.at(1,0)){
   override method efecto() {
-  if(protagonista.dinero() >= precio){
-    protagonista.adquirirEquipamiento()
-    self.pasarAComprada(precio, "mejora1Comprada.png")
+  if(protagonista.dinero() >= self.precio()){
+    protagonista.tieneEquipamientoPociones(true)
+    self.pasarAComprada(self.precio(), "mejora1Comprada.png")
   } else {
     self.negarCompra()
   }
   }
 }
-class Mejora2 inherits Mejora(precio = "200",imagen = "mejora2SinComprar.png",position = game.at(2,0)){
+class Mejora2 inherits Mejora(precio = 200,imagen = "mejora2SinComprar.png",position = game.at(2,0)){
   override method efecto() {
-  if(protagonista.dinero() >= precio){
-    protagonista.adquirirEquipamiento()
-    self.pasarAComprada(precio, "mejora2Comprada.png")
+  if(protagonista.dinero() >= self.precio()){
+    protagonista.tienePocionesValiosas(true)
+    self.pasarAComprada(self.precio(), "mejora2Comprada.png")
   } else {
     self.negarCompra()
   }
