@@ -36,6 +36,7 @@ object nivel {
     game.addVisual(new CajaVenta())
     game.addVisual(new Mejora1())
     game.addVisual(new Mejora2())
+    game.addVisual(new Pared())
   }
   method configurarInterfaz() {
     game.addVisual(new IconoPocionVerde())
