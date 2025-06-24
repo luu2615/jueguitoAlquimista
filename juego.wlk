@@ -20,6 +20,7 @@ object nivel {
 		keyboard.a().onPressDo{ protagonista.mover(izquierda)}
 		keyboard.d().onPressDo{ protagonista.mover(derecha)}
     keyboard.q().onPressDo { game.say(protagonista, "Tengo " + protagonista.plata() + " pesos") }
+    keyboard.e().onPressDo { game.say(protagonista, "Tengo " + protagonista.cantidadDePociones("verde") + " pociones") }
   }
   method configurarObjetos() {
     game.addVisual(new CalderonVerde())

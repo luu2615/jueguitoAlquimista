@@ -1,12 +1,24 @@
 object protagonista{
   var property position = game.center()
   var plata = 0
+  var inventario = []
   method plata() = plata
   method image() = "protagonista.png"
   method mover(direccion){
-	if(self.hayLugarLibreHacia_(direccion))self.position(direccion.siguiente(self.position()))else self.chocarCon_(self.objetoEn_(direccion))
+	if(self.hayLugarLibreHacia_(direccion)) self.position(direccion.siguiente(self.position())) else self.chocarCon_(self.objetoEn_(direccion))
   }
-  method hayLugarLibreHacia_(direccion) = game.getObjectsIn(direccion.siguiente(self.position())).size() == 0
+  method chocarCon_(objeto) {
+    objeto.efecto()
+  }
+  method hayObjetoEn_(direccion) = game.getObjectsIn(direccion.siguiente(self.position())).isEmpty()
+  method objetoEn_(direccion) = game.getObjectsIn(direccion.siguiente(self.position())).first()
+  method hayLugarLibreHacia_(direccion) = self.hayObjetoEn_(direccion)
+
+  //Logica pociones
+  method agregarPocion(pocion) {
+    inventario.add(pocion)
+  }
+  method cantidadDePociones(color) = inventario.filter({pocion => pocion.color() == color}).size()
 }
 
 
