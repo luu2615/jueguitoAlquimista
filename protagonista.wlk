@@ -30,8 +30,12 @@ object protagonista{
       ingredientes.add(ingrediente)
     }
   }
+  method tieneIngredientesDeTipo_(tipo) = self.cantidadDeIngredientes(tipo) > 0
   method ingredientesDeTipo_(tipo) = ingredientes.filter({ingrediente => ingrediente.tipo() == tipo})
-  method cantidadDeIngredientes(tipo) = self.pocionesDeColor_(tipo).size()
+  method cantidadDeIngredientes(tipo) = self.ingredientesDeTipo_(tipo).size()
+  method consumirIngrediente(tipo) {
+    ingredientes.remove(self.ingredientesDeTipo_(tipo).first())
+  }
   //Logica pociones
   method agregarPocion(pocion) {
     if(self.tieneEquipamientoPociones()) {

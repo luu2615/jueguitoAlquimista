@@ -17,7 +17,7 @@ class IconoPocionAmarillo inherits Visual(position = game.at(3,5)){
   method text() = protagonista.cantidadDePociones("amarillo").toString()
   method textColor() = "ffffff"
 }
-class IconoMoneda inherits Visual(position = game.at(4,5)){
+class IconoMoneda inherits Visual(position = game.at(5,5)){
   override method image() = "moneda.png"
   method text() = protagonista.dinero().toString()
   method textColor() = "FFDE59"
