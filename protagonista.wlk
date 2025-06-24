@@ -35,7 +35,7 @@ object protagonista{
   }
   //Logica venta y si tiene pociones valiosas adquiere el doble de dinero
   method agregarDinero(cantidad) {
-    if(self.tienePocionesValiosas()) {dinero = dinero + cantidad * 2} else {}
+    if(self.tienePocionesValiosas()) {dinero = dinero + cantidad * 2} else {dinero = dinero + cantidad}
   }
   method venderPociones() {
     self.agregarDinero(self.sumaValorPocionesDeColor_("verde"))

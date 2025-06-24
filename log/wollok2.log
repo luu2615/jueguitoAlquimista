@@ -467,3 +467,7 @@
 {"level":"info","message":"⌛ Validating juego.wlk","timeElapsed":116,"timestamp":"2025-06-24T20:56:22.201Z"}
 {"level":"info","message":"⌛ Validating calderones.wlk","timeElapsed":117,"timestamp":"2025-06-24T20:56:22.318Z"}
 >>>>>>> 758af6a505692f3620e26fe5e87b071efdfeee79
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34me:\\dev\\OBJ\\alquimia\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":285,"timestamp":"2025-06-24T21:16:41.925Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on e:\\dev\\OBJ\\alquimia\\jueguitoAlquimista","timeElapsed":79729,"timestamp":"2025-06-24T21:18:01.368Z"}
+{"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34me:\\dev\\OBJ\\alquimia\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":282,"timestamp":"2025-06-24T21:18:03.219Z"}
+{"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on e:\\dev\\OBJ\\alquimia\\jueguitoAlquimista","timeElapsed":50246,"timestamp":"2025-06-24T21:18:53.183Z"}

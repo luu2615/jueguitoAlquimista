@@ -3,14 +3,14 @@ import protagonista.*
 import calderones.*
 
 class IconoPocionVerde inherits Visual(position = game.at(1,5)){
-  override method image() = "Icon3.png"
+  override method image() = "PocionVerde.png"
   method text() = protagonista.cantidadDePociones("verde").toString()
-  method textColor() = "00FF00FF"
+  method textColor() = "ffffff"
 }
 class IconoPocionVioleta inherits Visual(position = game.at(2,5)){
-  override method image() = "Icon11.png"
+  override method image() = "PocionVioleta.png"
   method text() = protagonista.cantidadDePociones("violeta").toString()
-  method textColor() = "CC6CE7"
+  method textColor() = "ffffff"
 }
 class IconoMoneda inherits Visual(position = game.at(4,5)){
   override method image() = "moneda.png"
