@@ -14,6 +14,9 @@ class PocionVerde inherits Pocion{
 }
 class CajaVenta inherits Visual(position = game.at(8,4)){
   override method image() = "cajaVentas.png"
+    override method efecto() {
+    protagonista.venderPociones()
+  }
 }
 class CalderonVerde inherits Visual(position = game.at(2,7)){
   override method image() = "calderonVerde.png"

@@ -18,7 +18,14 @@ object protagonista{
   method agregarPocion(pocion) {
     inventario.add(pocion)
   }
-  method cantidadDePociones(color) = inventario.filter({pocion => pocion.color() == color}).size()
+  method pocionesDeColor_(color) = inventario.filter({pocion => pocion.color() == color})
+  method cantidadDePociones(color) = self.pocionesDeColor_(color).size()
+  method sumaValorPocionesDeColor_(color) = self.pocionesDeColor_(color).sum({pocion => pocion.valor()})
+  //Logica venta
+  method venderPociones() {
+    plata = plata + self.sumaValorPocionesDeColor_("verde")
+    self.pocionesDeColor_("verde").forEach({pocionVerde => inventario.remove(pocionVerde)})
+  }
 }
 
 
