@@ -33,6 +33,7 @@ object nivel {
   }
   method configurarObjetos() {
     game.addVisual(new CalderonVerde())
+    game.addVisual(new CalderonVioleta())
     game.addVisual(new CajaVenta())
     game.addVisual(new Mejora1())
     game.addVisual(new Mejora2())
