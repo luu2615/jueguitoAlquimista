@@ -4,7 +4,7 @@ class Visual{
   method image() = "calderon.png"
   method efecto() {}
 }
-class CajaVenta inherits Visual(position = game.at(4,2)){
+class CajaVenta inherits Visual(position = game.at(5,2)){
   override method image() = "cajaVentas.png"
     override method efecto() {
     protagonista.venderPociones()
@@ -12,6 +12,6 @@ class CajaVenta inherits Visual(position = game.at(4,2)){
   }
 }
 
-class Pared inherits Visual(position = game.at(5,0)){
+class Pared inherits Visual(position = game.at(0,0)){
   override method image() = "pared.jpeg"
 }

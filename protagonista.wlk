@@ -1,6 +1,7 @@
 object protagonista{
   var property position = game.center()
-  var inventario = []
+  var pociones = []
+  var ingredientes = []
   var dinero = 0
   method dinero() = dinero
   method image() = "protagonista.png"
@@ -17,16 +18,30 @@ object protagonista{
   //Logica upgrades
   var property tieneEquipamientoPociones = false
   var property tienePocionesValiosas = false
+  var property tieneEquipamientoIngredientes = false 
+  //Logica ingredientes para pociones
+  method agregarIngrediente(ingrediente) {
+    if(self.tieneEquipamientoIngredientes()) {
+      ingredientes.add(ingrediente)
+      ingredientes.add(ingrediente)
+      ingredientes.add(ingrediente)
+      ingredientes.add(ingrediente)
+    } else {
+      ingredientes.add(ingrediente)
+    }
+  }
+  method ingredientesDeTipo_(tipo) = ingredientes.filter({ingrediente => ingrediente.tipo() == tipo})
+  method cantidadDeIngredientes(tipo) = self.pocionesDeColor_(tipo).size()
   //Logica pociones
   method agregarPocion(pocion) {
     if(self.tieneEquipamientoPociones()) {
-      inventario.add(pocion)
-      inventario.add(pocion)
+      pociones.add(pocion)
+      pociones.add(pocion)
     } else {
-      inventario.add(pocion)
+      pociones.add(pocion)
     }
   }
-  method pocionesDeColor_(color) = inventario.filter({pocion => pocion.color() == color})
+  method pocionesDeColor_(color) = pociones.filter({pocion => pocion.color() == color})
   method cantidadDePociones(color) = self.pocionesDeColor_(color).size()
   method sumaValorPocionesDeColor_(color) = self.pocionesDeColor_(color).sum({pocion => pocion.valor()})
   //Logica compra
@@ -39,9 +54,9 @@ object protagonista{
   }
   method venderPociones() {
     self.agregarDinero(self.sumaValorPocionesDeColor_("verde"))
-    self.pocionesDeColor_("verde").forEach({pocionVerde => inventario.remove(pocionVerde)})
+    self.pocionesDeColor_("verde").forEach({pocionVerde => pociones.remove(pocionVerde)})
     self.agregarDinero(self.sumaValorPocionesDeColor_("violeta"))
-    self.pocionesDeColor_("violeta").forEach({pocionVerde => inventario.remove(pocionVerde)})
+    self.pocionesDeColor_("violeta").forEach({pocionVerde => pociones.remove(pocionVerde)})
   }
 }
 

@@ -18,7 +18,7 @@ class Mejora inherits Visual(){
     game.sound("error.wav").play()
   }
 }
-class Mejora1 inherits Mejora(precio = 100,imagen = "mejora1SinComprar.png",position = game.at(1,0)){
+class Mejora1 inherits Mejora(precio = 100,imagen = "mejora1SinComprar.png",position = game.at(2,0)){
   override method efecto() {
   if(protagonista.dinero() >= self.precio()){
     protagonista.tieneEquipamientoPociones(true)
@@ -28,7 +28,7 @@ class Mejora1 inherits Mejora(precio = 100,imagen = "mejora1SinComprar.png",posi
   }
   }
 }
-class Mejora2 inherits Mejora(precio = 200,imagen = "mejora2SinComprar.png",position = game.at(2,0)){
+class Mejora2 inherits Mejora(precio = 200,imagen = "mejora2SinComprar.png",position = game.at(3,0)){
   override method efecto() {
   if(protagonista.dinero() >= self.precio()){
     protagonista.tienePocionesValiosas(true)

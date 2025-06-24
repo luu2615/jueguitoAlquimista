@@ -3,6 +3,7 @@ import protagonista.*
 import calderones.*
 import mejoras.*
 import interfaz.*
+import tiendasIngredientes.*
 object nivel {
   method configurar() {
     self.configurarEscenario()
@@ -37,6 +38,9 @@ object nivel {
     game.addVisual(new CajaVenta())
     game.addVisual(new Mejora1())
     game.addVisual(new Mejora2())
+    game.addVisual(new TiendaIngredientesBasicos())
+    game.addVisual(new TiendaIngredientesAvanzados())
+    game.addVisual(new TiendaIngredientesExperto())
     game.addVisual(new Pared())
   }
   method configurarInterfaz() {
