@@ -1,10 +1,12 @@
 import protagonista.*
 import calderones.*
+import interfaz.*
 object nivel {
   method configurar() {
     self.configurarEscenario()
     self.configurarProtagonista()
     self.configurarObjetos()
+    self.configurarInterfaz()
   }
   method configurarEscenario() {
     game.cellSize(100)
@@ -25,5 +27,8 @@ object nivel {
   method configurarObjetos() {
     game.addVisual(new CalderonVerde())
     game.addVisual(new CajaVenta())
-  } 
+  }
+  method configurarInterfaz() {
+    game.addVisual(new IconoPocionVerde())
+  }
 }
