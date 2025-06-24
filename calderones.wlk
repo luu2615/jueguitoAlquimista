@@ -32,3 +32,15 @@ class CalderonVioleta inherits Calderon(position = game.at(3,4)){
       }
   }
 }
+class CalderonDorado inherits Calderon(position = game.at(4,4)){
+  override method image() = "calderonDorado.png"
+  override method efecto() {
+    if(protagonista.tieneIngredientesDeTipo_("experto")){
+      protagonista.agregarPocion(new PocionVioleta())
+      protagonista.consumirIngrediente("experto")
+      game.sound("brebaje.wav").play()
+      } else {
+        self.negarFabricacion()
+      }
+  }
+}

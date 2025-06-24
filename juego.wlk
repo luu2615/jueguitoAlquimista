@@ -47,6 +47,10 @@ object nivel {
   method configurarInterfaz() {
     game.addVisual(new IconoPocionVerde())
     game.addVisual(new IconoPocionVioleta())
+    game.addVisual(new IconoPocionDorada())
     game.addVisual(new IconoMoneda())
+    game.addVisual(new IconoIngredienteBasico())
+    game.addVisual(new IconoIngredienteAvanzado())
+    game.addVisual(new IconoIngredienteExperto())
   }
 }
