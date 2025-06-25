@@ -13,5 +13,5 @@ class CajaVenta inherits Visual(position = game.at(5,2)){
 }
 
 class Pared inherits Visual(position = game.at(0,0)){
-  override method image() = "pared.jpeg"
+  override method image() = "pared.png"
 }
