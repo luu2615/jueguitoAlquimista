@@ -533,3 +533,5 @@
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\cpu\\Documents\\Trabajos de la universidad\\Programacion Con Objetos\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":1165,"timestamp":"2025-06-25T00:07:52.944Z"}
 {"exitCode":"SIGHUP","level":"info","message":"👾 Game executed main.juego on c:\\Users\\cpu\\Documents\\Trabajos de la universidad\\Programacion Con Objetos\\jueguitoAlquimista","timeElapsed":389369,"timestamp":"2025-06-25T00:14:21.157Z"}
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmain.juego\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\cpu\\Documents\\Trabajos de la universidad\\Programacion Con Objetos\\jueguitoAlquimista\u001b[39m\u001b[23m","ok":true,"timeElapsed":2326,"timestamp":"2025-06-25T00:14:31.139Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":700,"timestamp":"2025-06-25T00:39:14.544Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":300,"timestamp":"2025-06-25T00:39:14.917Z"}
