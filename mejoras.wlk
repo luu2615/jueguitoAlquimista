@@ -38,4 +38,14 @@ class Mejora2 inherits Mejora(precio = 200,imagen = "mejora2SinComprar.png",posi
   }
   }
 }
+class Mejora3 inherits Mejora(precio = 200,imagen = "mejora3SinComprar.png",position = game.at(3,0)){
+  override method efecto() {
+  if(protagonista.dinero() >= self.precio()){
+    protagonista.tieneEquipamientoIngredientes(true)
+    self.pasarAComprada(self.precio(), "mejora3Comprada.png")
+  } else {
+    self.negarCompra()
+  }
+  }
+}
 
