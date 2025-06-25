@@ -39,6 +39,7 @@ object nivel {
     game.addVisual(new CajaVenta())
     game.addVisual(new Mejora1())
     game.addVisual(new Mejora2())
+    game.addVisual(new Mejora3())
     game.addVisual(new TiendaIngredientesBasicos())
     game.addVisual(new TiendaIngredientesAvanzados())
     game.addVisual(new TiendaIngredientesExperto())
