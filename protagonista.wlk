@@ -57,10 +57,11 @@ object protagonista{
     if(self.tienePocionesValiosas()) {dinero = dinero + cantidad * 2} else {dinero = dinero + cantidad}
   }
   method venderPociones() {
-    self.agregarDinero(self.sumaValorPocionesDeColor_("verde"))
-    self.pocionesDeColor_("verde").forEach({pocionVerde => pociones.remove(pocionVerde)})
-    self.agregarDinero(self.sumaValorPocionesDeColor_("violeta"))
-    self.pocionesDeColor_("violeta").forEach({pocionVerde => pociones.remove(pocionVerde)})
+    pociones.forEach({pocion => self.venderPocion(pocion)})
+  }
+  method venderPocion(pocion) {
+    self.agregarDinero(pocion.valor())
+    pociones.remove(pocion)
   }
 }
 

@@ -5,6 +5,10 @@ class TiendaIngredientes inherits Visual(){
   method precio()
   method text() = if(self.precio() > 0) self.precio().toString() else ""
   method textColor() = "FFDE59"
+  method negarCompra() {
+    game.say(self, "No tenes suficientes monedas")
+    game.sound("error.wav").play()
+  }
 }
 class TiendaIngredientesBasicos inherits TiendaIngredientes(position = game.at(1,3)){
   override method image() = "ingredientesBasicos.png"
@@ -18,23 +22,25 @@ class TiendaIngredientesAvanzados inherits TiendaIngredientes(position = game.at
   override method image() = "ingredientesAvanzados.png"
   override method precio() = 20
   override method efecto() {
-    protagonista.removerDinero(self.precio())
-    protagonista.agregarIngrediente(new IngredienteAvanzado())
-    game.sound("obtenido.wav").play()
-  if(protagonista.dinero() >= self.precio()){
-    protagonista.removerDinero(self.precio())
-    protagonista.agregarIngrediente(new IngredienteAvanzado())
-    game.sound("obtenido.wav").play()
-  } else {
-    self.negarCompra()
+    if(protagonista.dinero() >= self.precio()){
+      protagonista.removerDinero(self.precio())
+      protagonista.agregarIngrediente(new IngredienteAvanzado())
+      game.sound("obtenido.wav").play()
+    } else {
+      self.negarCompra()
+    }
   }
 }
 class TiendaIngredientesExperto inherits TiendaIngredientes(position = game.at(1,1)){
   override method image() = "ingredientesExpertos.png"
   override method precio() = 100
   override method efecto() {
-    protagonista.removerDinero(self.precio())
-    protagonista.agregarIngrediente(new IngredienteExperto())
-    game.sound("obtenido.wav").play()
+    if(protagonista.dinero() >= self.precio()){
+      protagonista.removerDinero(self.precio())
+      protagonista.agregarIngrediente(new IngredienteExperto())
+      game.sound("obtenido.wav").play()
+    } else {
+      self.negarCompra()
+    }
   }
 }
