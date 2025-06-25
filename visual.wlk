@@ -15,5 +15,5 @@ class Bloqueo{
   var property position
 }
 class Pared inherits Visual(position = game.at(0,0)){
-  override method image() = "pared.jpeg"
+  override method image() = "pared.png"
 }
