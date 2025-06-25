@@ -36,7 +36,7 @@ class CalderonDorado inherits Calderon(position = game.at(4,4)){
   override method image() = "calderonDorado.png"
   override method efecto() {
     if(protagonista.tieneIngredientesDeTipo_("experto")){
-      protagonista.agregarPocion(new PocionVioleta())
+      protagonista.agregarPocion(new PocionDorada())
       protagonista.consumirIngrediente("experto")
       game.sound("brebaje.wav").play()
       } else {
