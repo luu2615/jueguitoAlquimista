@@ -11,7 +11,9 @@ class CajaVenta inherits Visual(position = game.at(5,2)){
     game.sound("vender.wav").play()
   }
 }
-
+class Bloqueo{
+  var property position
+}
 class Pared inherits Visual(position = game.at(0,0)){
   override method image() = "pared.jpeg"
 }
